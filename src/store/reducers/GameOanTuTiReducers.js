@@ -1,5 +1,5 @@
 import * as OTTtype from '../constants/GameOanTuTiConstants'
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
 const listOTT = [
     { id: 0, image: './image/dauhoi.png' },
     { id: 1, image: './image/keo.png' },

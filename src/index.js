@@ -5,6 +5,7 @@ import 'jquery/dist/jquery';
 import 'popper.js/dist/umd/popper'
 import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'sweetalert'
 import App from './App';
 import { Provider } from 'react-redux'
 import store from './store';
