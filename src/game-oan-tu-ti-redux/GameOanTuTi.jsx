@@ -48,13 +48,9 @@ class GameOanTuTi extends Component {
                             <audio id="win" src="./image/Am-thanh-tra-loi-dung-www_nhacchuongvui_com.mp3"></audio>
                             <audio id="loser" src="./image/Am-thanh-tra-loi-sai-www_nhacchuongvui_com.mp3"></audio>
                             <audio id="draw" src="./image/Tieng-wow-tre-con-www_nhacchuongvui_com.mp3"></audio>
-                            <audio id="loi" src="./image/Tieng-tinh-tinh-www_tiengdong_com.mp3"></audio>
+                            {/* <audio id="loi" src="./image/Tieng-tinh-tinh-www_tiengdong_com.mp3"></audio> */}
                             
-                            {/* <div className="infor">{OTT.notification} </div>*/}
-                            <a href=""></a>
-                            <div className="title">
-                                <h1 className="text-center total">I'm iron man, I love <br /> you 3000!!</h1>
-                            </div>
+                            <div className="infor"><h1 className="text-center total">{OTT.notification}</h1> </div>
 
                             <div className="winningTurn py-4">
                                 <h1 className="text-center  text-success">Số bàn thắng: <span className="total">{OTT.soBanThang}</span></h1>

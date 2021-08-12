@@ -1,5 +1,5 @@
 import * as OTTtype from '../constants/GameOanTuTiConstants'
-// import swal from 'sweetalert';
+
 const listOTT = [
     { id: 0, image: './image/dauhoi.png' },
     { id: 1, image: './image/keo.png' },
@@ -8,7 +8,7 @@ const listOTT = [
 ];
 
 const initialState = {
-    // notification: '',
+    notification: "I'm iron man, I love you 3000!!",
     soBanThang: 0,
     soBanChoi: 0,
     computerPick: listOTT[0],
@@ -37,14 +37,16 @@ const gameOanTuTiReducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case OTTtype.SELECT_OTT:
             let isFind = listOTT.find((item) => item.id === payload);
+            state.notification = "I'm iron man, I love you 3000!!"
             state.computerPick = listOTT[0];
             state.playerPick = isFind;
             break;
 
         case OTTtype.PLAY_OTT:
             if (state.playerPick.id === 0) {
-                document.getElementById('loi').play();
-                swal("Oops!", "Please choose before you play!!", "warning");
+                // document.getElementById('loi').play();
+                alert("Please choose before you play!");
+                // swal("Oops!", "Please choose before you play!!", "warning");
                 break;
             }
             const idRandom = getRandomOTT(1, 3);
@@ -55,14 +57,15 @@ const gameOanTuTiReducer = (state = initialState, { type, payload }) => {
             if (result == 'WIN') {
                 state.soBanThang += 1;
                 document.getElementById('win').play();
-                swal("Winner!", "You clicked the button to play again!", "success");
+                // swal("Winner!", "You clicked the button to play again!", "success");
             } else if (result == 'LOSE') {
                 document.getElementById('loser').play();
-                swal("Loser!", "You clicked the button to play again!", "error");
+                // swal("Loser!", "You clicked the button to play again!", "error");
             } else {
                 document.getElementById('draw').play();
-                swal("Draw!", "You clicked the button to play again!", "info");
+                // swal("Draw!", "You clicked the button to play again!", "info");
             }
+            state.notification = result;
             break;
 
         default:
