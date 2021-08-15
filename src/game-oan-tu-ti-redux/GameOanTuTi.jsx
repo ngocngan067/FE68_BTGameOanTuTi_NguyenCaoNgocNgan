@@ -78,11 +78,7 @@ class GameOanTuTi extends Component {
                             </div>
                         </div>
                     </div>
-
                 </div>
-
-
-
             </div>
         )
     }
